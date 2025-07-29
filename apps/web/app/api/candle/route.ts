@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const token = process.env.NEXT_PUBLIC_FINNHUB_TOKEN;
+  const token = process.env.FINNHUB_API_KEY;
   if (!token) {
     return new Response(JSON.stringify({ error: 'FINNHUB_API_KEY not configured' }), {
       status: 500,
